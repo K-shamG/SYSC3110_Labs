@@ -1,3 +1,4 @@
+package buddy_labs;
 
 public class BuddyInfo {
 	private String name; 
