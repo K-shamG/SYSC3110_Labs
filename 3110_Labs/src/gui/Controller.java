@@ -1,8 +1,11 @@
-package buddy_labs;
+package gui;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+
+import buddy_labs.AddressBook;
+import buddy_labs.BuddyInfo;
 
 public class Controller implements ActionListener{
 	private AddressBook book;

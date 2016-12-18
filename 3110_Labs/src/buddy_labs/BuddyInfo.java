@@ -1,20 +1,20 @@
 package buddy_labs;
 
-import org.omg.PortableInterceptor.ServerRequestInterceptor;
-
 public class BuddyInfo {
 	private String name; 
 	private String address;
 	private String number;
-	
-	public BuddyInfo() {
-		this(null, null, null);
-	}
-	
+	private int age; 
+		
 	public BuddyInfo(String name, String address, String number) {
+		if(name.equals(null) || address.equals(null) || number.equals(null)) throw new NullPointerException(); 
 		this.name = name;
 		this.address = address;
 		this.number = number;
+	}
+	
+	public BuddyInfo(BuddyInfo b) {
+		this(b.getName(), b.getAddress(), b.getNumber());
 	}
 	
 	public String getName() {
@@ -36,8 +36,24 @@ public class BuddyInfo {
 		this.number = number;
 	}
 	
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public boolean isOver18() {
+		return age > 18; 
+	}
+	
 	public String toString() {
 		return "Name: " + name + ", Address: " + address + ", Phone Number: " + number; 
+	}
+	
+	public String greeting() {
+		return "Salut " + name; 
 	}
 	
 	public static void main(String[] args) {

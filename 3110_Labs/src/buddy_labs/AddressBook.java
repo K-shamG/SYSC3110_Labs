@@ -16,8 +16,17 @@ public class AddressBook {
 		if(b != null) buddies.add(b);
 	}
 	
-	public void removeBuddy(int i){
-		if(i >= 0 && i < buddies.size()) buddies.remove(i);
+	public BuddyInfo removeBuddy(int i){
+		if(i >= 0 && i < buddies.size()) return buddies.remove(i);
+		else return null;
+	}
+	
+	public int size() {
+		return buddies.size(); 
+	}
+	
+	public void clear() {
+		buddies.clear(); 
 	}
 	
 	public String toString() {
