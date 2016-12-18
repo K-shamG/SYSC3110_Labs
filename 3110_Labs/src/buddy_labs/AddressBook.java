@@ -10,11 +10,11 @@ public class AddressBook {
 	}
 	
 	public void addBuddy(BuddyInfo b){
-		buddies.add(b);
+		if(b != null) buddies.add(b);
 	}
 	
 	public void removeBuddy(int i){
-		buddies.remove(i);
+		if(i >= 0 && i < buddies.size()) buddies.remove(i);
 	}
 	
 	public static void main(String[] args) {
