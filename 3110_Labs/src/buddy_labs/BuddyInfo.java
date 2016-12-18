@@ -1,5 +1,7 @@
 package buddy_labs;
 
+import org.omg.PortableInterceptor.ServerRequestInterceptor;
+
 public class BuddyInfo {
 	private String name; 
 	private String address;
@@ -35,14 +37,15 @@ public class BuddyInfo {
 	}
 	
 	public String toString() {
-		return "Hello " + name + "!"; 
+		return "Name: " + name + ", Address: " + address + ", Phone Number: " + number; 
 	}
 	
 	public static void main(String[] args) {
 		String name = "Kshamina";
+		String address = "333 Cool Lane";
+		String number = "555-555-5555";
 		
-		BuddyInfo buddy = new BuddyInfo();
-		buddy.setName(name);
+		BuddyInfo buddy = new BuddyInfo(name, address, number);
 		System.out.println(buddy.toString());
 				
 	}
